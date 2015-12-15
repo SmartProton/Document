@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../css/StyleSheet.css" rel="stylesheet" />
+    <link href="../css/personalcenter.css" rel="stylesheet" />
+    <link href="../css/DocumentManagerDraft.css" rel="stylesheet" />
+    <script src="../js/menu.js"></script>
+    <script src="../js/jquery.password.js"></script>
+    <title>公文审批系统--账号管理</title>
+    <script type="text/javascript">
+        $(function () {
+            $('#pass').keyup(function () {
+                var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
+                var mediumRegex = new RegExp("^(?=.{7,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
+                var enoughRegex = new RegExp("(?=.{6,}).*", "g");
+
+                if (false == enoughRegex.test($(this).val())) {
+                    $('#level').removeClass('pw-weak');
+                    $('#level').removeClass('pw-medium');
+                    $('#level').removeClass('pw-strong');
+                    $('#level').addClass(' pw-defule');
+                    //密码小于六位的时候，密码强度图片都为灰色 
+                }
+                else if (strongRegex.test($(this).val())) {
+                    $('#level').removeClass('pw-weak');
+                    $('#level').removeClass('pw-medium');
+                    $('#level').removeClass('pw-strong');
+                    $('#level').addClass(' pw-strong');
+                    //密码为八位及以上并且字母数字特殊字符三项都包括,强度最强 
+                }
+                else if (mediumRegex.test($(this).val())) {
+                    $('#level').removeClass('pw-weak');
+                    $('#level').removeClass('pw-medium');
+                    $('#level').removeClass('pw-strong');
+                    $('#level').addClass(' pw-medium');
+                    //密码为七位及以上并且字母、数字、特殊字符三项中有两项，强度是中等 
+                }
+                else {
+                    $('#level').removeClass('pw-weak');
+                    $('#level').removeClass('pw-medium');
+                    $('#level').removeClass('pw-strong');
+                    $('#level').addClass('pw-weak');
+                    //如果密码为6为及以下，就算字母、数字、特殊字符三项都包括，强度也是弱的 
+                }
+                return true;
+            });
+        })
+    </script>
+</head>
+<body>
+    <div id="header">
+        <div id="logo">
+            <img src="../pictures/1.png" width="75" height="60" />
+        </div>
+        <div id="biaoti">
+            <h1>公文审批</h1>
+        </div>
+        <div id="caidan">
+            <ul>
+                <li><a href="Home.html">首页</a></li>
+                <li><a href="Affairs.html">个人事务</a></li>
+                <li><a href="DocumentManagerDraft.html">公文管理</a></li>
+                <li><a href="FileManagerRead.html">档案管理</a></li>
+                <li><a href="PublicInformation.html">公共信息</a></li>
+                <li><a href="ContractBacklog.html">合同管理</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="note">
+            <div id="box">
+                <img src="../pictures/2.png" width="37" height="31" />
+            </div>
+            <h2>尊敬的用户，欢迎您！</h2>
+            <div id="mes">
+                <ul>
+                    <li><a href="PersonalMessagecenter.html">未读消息【0】   |</a></li>
+                    <li><a href="PersonalCenter.html">个人中心   |</a></li>
+                    <li><a href="#">退出   |</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <ul class="menu">
+                <li class="level1">
+                    <a href="#none">个人中心</a>
+                    <ul class="level2">
+                        <li><a href="PersonalCenter.html">个人信息</a></li>
+                        <li><a href="PersonalMessagecenter.html">消息中心</a></li>
+                        <li><a href="PersonalAccountmanager.html">账号管理</a></li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <a href="#none">系统管理</a>
+                    <ul class="level2">
+                        <li><a href="PersonalPowersetting.html">权限设置</a></li>
+                        <li><a href="PersonalProcesssetting.html">流程设置</a></li>
+                        <li><a href="PersonalUsermanager.html">用户管理</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="text">
+            <h3>首页--个人中心--账号管理</h3>
+            <h1>账号管理</h1>
+            <hr style="width: 866px; color: #999; margin-top: -2px;" />
+            <div style="width: 800px; margin: 20px auto;">
+                <div class="toolbar">
+                    <button>修改密码</button>
+                   <a href="PersonalCenter.html"> <button>返回</button></a>
+                </div>
+                <div style="width: 800px; margin: 20px auto;">
+                    <div class="input_div_line">
+                        <div class="text_title_s">用户名</div>
+                        <div class="input_text" type="text">机智的璐璐璐璐</div>
+                    </div>
+
+                    <div class="input_div_line">
+                        <div class="text_title_s">原密码</div>
+                        <div class="input_text" type="text">12345678</div>
+                    </div>
+                    <div class="input_div_line">
+                        <table>
+                            <tr>
+                                <th class="text_title_s">新密码</th>
+                                <td><span class="tbl-txt" >
+                                    <input  id="pass" class="input_text" size="30" maxlength="30" name="pass" type="text" /></span></td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td id="level" class="pw-strength">
+                                    <div class="pw-bar"></div>
+                                    <div class="pw-bar-on"></div>
+                                    <div class="pw-txt">
+                                        <span>弱</span>
+                                        <span>中</span>
+                                        <span>强</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="input_div_line">
+                        <div class="text_title_s">确认密码</div>
+                        <div class="input_text" type="text">123456</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

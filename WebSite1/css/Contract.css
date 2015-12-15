@@ -1,0 +1,23 @@
+.item_title{
+	width: 200px;
+}
+
+.search_content{
+	height: 130px;
+}
+.item_operation,.item_id{
+	width: 50px;
+	text-align: center;
+}
+.item_time{
+	width: 120px;
+	text-align: center;
+}
+.item_operator{
+	text-align: center;
+	width: 120px;
+}
+.item_remark{
+	width: 230px;
+	text-align: center;
+}

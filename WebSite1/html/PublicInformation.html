@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../css/DocumentManagerDraft.css" rel="stylesheet" />
+    <link href="../css/personalcenter.css" rel="stylesheet" />
+    <link href="../css/StyleSheet.css" rel="stylesheet" />
+    <script src="../js/menu.js"></script>
+    <script src="../js/jquery-1.9.1.min.js"></script>
+    <script src="../js/jquery.selectlist.js"></script>
+    <title>公文审批系统--公共信息--系统公告</title>
+</head>
+<body>
+    <div id="header">
+        <div id="logo">
+            <img src="../pictures/1.png" width="75" height="60" />
+        </div>
+        <div id="biaoti">
+            <h1>公文审批</h1>
+        </div>
+        <div id="caidan">
+            <ul>
+                <li><a href="Home.html">首页</a></li>
+                <li><a href="Affairs.html">个人事务</a></li>
+                <li><a href="DocumentManagerDraft.html">公文管理</a></li>
+                <li><a href="FileManagerRead.html">档案管理</a></li>
+                <li><a href="PublicInformation.html">公共信息</a></li>
+                <li><a href="ContractBacklog.html">合同管理</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="note">
+            <div id="box">
+                <img src="../pictures/2.png" width="37" height="31" />
+            </div>
+            <h2>尊敬的用户，欢迎您！</h2>
+            <div id="mes">
+                <ul>
+                    <li><a href="PersonalMessagecenter.html">未读消息【0】   |</a></li>
+                    <li><a href="PersonalCenter.html">个人中心   |</a></li>
+                    <li><a href="#">退出   |</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <ul class="menu">
+                <li class="level1">
+                    <a href="PublicInformation.html">系统公告</a>
+                </li>
+                <li class="level1">
+                    <a href="PublicInformationdepworker.html">部门员工</a>
+                </li>
+                <li class="level1">
+                    <a href="PublicInformationdepnotes.html">部门公告</a>
+                </li>
+                <li class="level1">
+                    <a href="PublicInformationPublishdoc.html">已发公文</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="text">
+            <h3>首页--公共信息--系统公告</h3>
+            <h1>系统公告</h1>
+            <hr style="width: 866px; color: #999; margin-top: -2px;" />
+            <div style="width: 800px; margin: 20px auto;">
+                <div class="toolbar2">
+                    <div class="search_content">
+                        <div class="search_type_select">
+                            <div class="text_title">状态</div>
+                            <div id="main1">
+                                <select id="state1" name="state1">
+                                    <option value="0">未查看</option>
+                                    <option value="1">已查看</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="search_type_select">
+                            <div class="text_title">类型</div>
+                            <div id="main2">
+                                <select id="state2" name="state2">
+                                    <option value="0">公共消息</option>
+                                    <option value="1">私人消息</option>
+                                    <option value="2">部门消息</option>
+                                    <option value="3">通报</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="search_type_input">
+                            <div class="text_title">标题</div>
+                            <input class="search_input_text" />
+                        </div>
+
+                        <a href="#" class="search_button button_gray">查询</a>
+                        <div class="search_type_input">
+                            <div class="text_title">日期</div>
+                            <form name="reg_testdate">
+                                <select name="YYYY" onchange="YYYYDD(this.value)">
+                                    <option value="">请选择 年</option>
+                                </select>
+                                <select name="MM" onchange="MMDD(this.value)">
+                                    <option value="">选择 月</option>
+                                </select>
+                                <select name="DD">
+                                    <option value="">选择 日</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div style="width: 800px; margin: 20px auto;">
+                    <table class="table_content" id="dynamicTable" width="800" border="0" cellspacing="0" cellpadding="0">
+                        <thead>
+                            <tr>
+                                <td class="table_item item_checkbox"></td>
+                                <td class="table_item item_title">标题</td>
+                                <td class="table_item item_time">日期</td>
+                                <td class="table_item item_type">公告类型</td>
+                                 <td class="table_item item_type">状态</td>
+                                <td class="table_item item_operation">操作</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="table_line1" class="table_row">
+                                <td class="table_item item_checkbox">
+                                    <input type="checkbox" />
+                                </td>
+                                <td class="table_item item_title">2015年国庆放假通知</td>
+                                <td class="table_item item_time">2015/9/30</td>
+                                <td class="table_item item_type">通报</td>
+                                <td class="table_item item_situation">未查看</td>
+                                <a href="PublicInformationcheck.html">
+                                    <td class="table_item item_operation">查看</td>
+                                </a>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="toolbar">
+                        <div class="pageswitchdiv">
+                            <button>前一页</button>
+                            <span>1</span>/<span>1</span>页
+					<button>后一页</button>
+                            <input type="text" style="width: 20px;" />
+                            <button>GO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

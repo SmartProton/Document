@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../css/StyleSheet.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/DocumentManagerDraft.css" />
+    <script src="../js/menu.js"></script>
+    <script src="../js/jquery1.7.js"></script>
+    
+    <title>公文审批系统-合同管理--合同草拟</title>
+</head>
+<body>
+
+    <div id="header">
+        <div id="logo">
+            <img src="../pictures/1.png" width="75" height="60" />
+        </div>
+        <div id="biaoti">
+            <h1>公文审批</h1>
+        </div>
+        <div id="caidan">
+            <ul>
+                 <li><a href="Home.html">首页</a></li>
+                <li><a href="Affairs.html">个人事务</a></li>
+                <li><a href="DocumentManagerDraft.html">公文管理</a></li>
+                <li><a href="FileManagerRead.html">档案管理</a></li>
+                <li><a href="PublicInformation.html">公共信息</a></li>
+                <li><a href="ContractBacklog.html">合同管理</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="note">
+            <div id="box">
+                <img src="../pictures/2.png" width="37" height="31" />
+            </div>
+            <h2>尊敬的用户，欢迎您！</h2>
+            <div id="mes">
+                <ul>
+                   <li><a href="PersonalMessagecenter.html">未读消息【0】   |</a></li>
+                    <li><a href="PersonalCenter.html">个人中心   |</a></li>
+                    <li><a href="#">退出   |</a></li>
+                </ul>
+            </div>
+        </div>
+       
+       	<div class="sidebar">
+            <ul class="menu">
+                <li class="level1">
+                    <a href="#none">办公登记</a>
+                    <ul class="level2">
+                        <li><a href="ContractDraft.html">草稿箱</a></li>
+                        <li><a href="ContractBacklog.html">已评审</a></li>
+                        <li><a href="ContractHandled.html">未评审</a></li>
+                        <li><a href="ContractSupervise.html">执行监督</a></li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <a href="#none">合同归档</a>
+                    <ul class="level2">
+                        <li><a href="ContractPlace.html">合同归档</a></li>
+                        <li><a href="ContractRefer.html">归档查询</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+       
+         <div class="text">
+             <h3>首页--合同管理--合同草拟</h3>
+             <h1>合同草拟</h1>
+             <hr style="width: 866px; color: #999;  margin-top:-2px;"/>
+           <div style="width:800px;margin:20px auto;">
+           	
+           	<div class="toolbar">
+				<a href="DocumentManagerDraft.html"><button>存稿</button></a>
+				<a href="DocumentManagerSubConfirm.html"><button>提交</button></a>
+				<a href="DocumentManagerDraft.html"><button>返回</button></a>
+			</div>
+			
+		<div style="width:800px;margin:20px auto;">
+			<div class="search_type_select">
+				<div class="text_title">执行人</div>
+				<span class="search_select_text close">
+					<a class="default">
+						<span class="search_type_select_item">请选择类型</span>
+						<span class="select_icon">▼</span>
+					</a>
+					<a class="search_type_select_item hidden">通报</a>
+					<a class="search_type_select_item hidden">决议</a>
+				</span>
+			</div>
+			<div class="search_type_select">
+				<div class="text_title">编号</div>
+				<input class="input_text" type="text" />
+			</div>
+			<div class="title_type_input">
+				<div class="text_title">标题</div>
+				<input class="title_input_text" type="text" />
+			</div>
+			<div class="main_content_div">
+				<div class="text_title">正文</div>
+				<textarea class="main_content_text" type="text"></textarea>
+			</div>
+		</div>
+	
+	
+	
+	
+	
+              </div>     
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../js/select.js" ></script>
+</html>

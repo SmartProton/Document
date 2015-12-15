@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../css/StyleSheet.css" rel="stylesheet" />
+    <script src="../js/menu.js"></script>
+    <script src="../js/jquery1.7.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var show_count = 20;   //要显示的条数
+            var count = 1;    //递增的开始值，这里是你的ID
+            $("#btn_addtr").click(function () {
+
+                var length = $("#dynamicTable tbody tr").length;
+                //alert(length);
+                if (length < show_count)    //点击时候，如果当前的数字小于递增结束的条件
+                {
+                    $("#tab11 tbody tr").clone().appendTo("#dynamicTable tbody");   //在表格后面添加一行
+                    changeIndex();//更新行号
+                }
+            });
+
+
+        });
+        function changeIndex() {
+            var i = 1;
+            $("#dynamicTable tbody tr").each(function () { //循环tab tbody下的tr
+                $(this).find("input[name='NO']").val(i++);//更新行号
+            });
+        }
+
+        function deltr(opp) {
+            var length = $("#dynamicTable tbody tr").length;
+            //alert(length);
+            if (length <= 1) {
+                alert("至少保留一行");
+            } else {
+                $(opp).parent().parent().remove();//移除当前行
+                changeIndex();
+            }
+        }
+    </script>
+    <title>三界页面</title>
+</head>
+<body>
+
+    <div id="header">
+        <div id="logo">
+            <img src="../pictures/1.png" width="75" height="60" />
+        </div>
+        <div id="biaoti">
+            <h1>公文审批</h1>
+        </div>
+        <div id="caidan">
+            <ul>
+                <li><a href="Home.html">首页</a></li>
+                <li><a href="Affairs.html">个人事务</a></li>
+                <li><a href="DocumentManagerDraft.html">公文管理</a></li>
+                <li><a href="FileManagerRead.html">档案管理</a></li>
+                <li><a href="PublicInformation.html">公共信息</a></li>
+                <li><a href="ContractBacklog.html">合同管理</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="note">
+            <div id="box">
+                <img src="../pictures/2.png" width="37" height="31" />
+            </div>
+            <h2>尊敬的用户，欢迎您！</h2>
+            <div id="mes">
+                <ul>
+                    <li><a href="#">未读消息【0】   |</a></li>
+                    <li><a href="#">个人中心   |</a></li>
+                    <li><a href="#">退出   |</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <ul class="menu">
+                <li class="level1">
+                    <a href="#none">发文管理</a>
+                    <ul class="level2">
+                        <li><a href="#none">办理工作</a></li>
+                        <li><a href="#none">办结工作</a></li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <a href="#none">收文管理</a>
+                    <ul class="level2">
+                        <li><a href="#none">课程列表</a></li>
+                        <li><a href="#none">添加课程</a></li>
+                        <li><a href="#none">添加模块或单元</a></li>
+                        <li><a href="#none">修改模块或单元</a></li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <a href="#none">发文登记</a>
+                    <ul class="level2">
+                        <li><a href="#none">学科管理</a></li>
+                        <li><a href="#none">系列管理</a></li>
+                        <li><a href="#none">学段管理</a></li>
+                        <li><a href="#none">年份管理</a></li>
+                    </ul>
+                </li>
+                <li class="level1"><a href="#none">收文登记</a></li>
+                <li class="level1">
+                    <a href="#none">签文管理</a>
+                    <ul class="level2">
+                        <li><a href="#none">同步动态</a></li>
+                        <li><a href="#none">常见问题</a></li>
+                        <li><a href="#none">站内消息</a></li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <a href="#none">督办管理</a>
+                    <ul class="level2">
+                        <li><a href="#none">总体统计</a></li>
+                        <li><a href="#none">课程</a></li>
+                        <li><a href="#none">课程</a></li>
+                        <li><a href="#none">课程</a></li>
+                        <li><a href="#none">课程</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="text">
+            <h3>首页--公文管理--发文管理--在办箱</h3>
+            <h1>办理工作</h1>
+            <hr style="width: 866px; color: #999; margin-top: -2px;" />
+            <div style="width: 720px; margin: 20px auto;">
+
+                <table id="tab11" style="display: none">
+                    <tbody>
+                        <tr>
+                            <td height="30" align="center">
+                                <input type="text" name="NO" size="2" value="1" /></td>
+                            <td align="center">
+                                <input type="text" name="start_end_time" /></td>
+                            <td align="center">
+                                <input type="text" name="unit_department" /></td>
+                            <td align="center">
+                                <input type="text" name="post" /></td>
+                            <td>
+                                <input type="button" id="Button1" onclick="deltr(this)" value="删行">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <input type="button" id="btn_addtr" value="增行">
+                <table id="dynamicTable" width="700" border="0" cellspacing="0" cellpadding="0">
+                    <thead>
+                        <tr>
+                            <td height="30" align="center" bgcolor="#CCCCCC">ID</td>
+                            <td align="center" bgcolor="#CCCCCC">起止时间</td>
+                            <td align="center" bgcolor="#CCCCCC">单位/部门</td>
+                            <td align="center" bgcolor="#CCCCCC">职位</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td height="30" align="center">
+                                <input type="text" name="NO" size="2" value="1" /></td>
+                            <td align="center">
+                                <input type="text" name="start_end_time" /></td>
+                            <td align="center">
+                                <input type="text" name="unit_department" /></td>
+                            <td align="center">
+                                <input type="text" name="post" /></td>
+                            <td>
+                                <input type="button" id="Button2" onclick="deltr(this)" value="删行">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

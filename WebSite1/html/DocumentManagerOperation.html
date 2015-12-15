@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../css/StyleSheet.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/DocumentManagerDraft.css" />
+    <script src="../js/menu.js"></script>
+    <script src="../js/jquery1.7.js"></script>
+    
+    <title>公文审批系统-公文管理--发文管理--公文操作</title>
+</head>
+<body>
+
+    <div id="header">
+        <div id="logo">
+            <img src="../pictures/1.png" width="75" height="60" />
+        </div>
+        <div id="biaoti">
+            <h1>公文审批</h1>
+        </div>
+        <div id="caidan">
+            <ul>
+                 <li><a href="Home.html">首页</a></li>
+                <li><a href="Affairs.html">个人事务</a></li>
+                <li><a href="DocumentManagerDraft.html">公文管理</a></li>
+                <li><a href="FileManagerRead.html">档案管理</a></li>
+                <li><a href="PublicInformation.html">公共信息</a></li>
+                <li><a href="ContractBacklog.html">合同管理</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="note">
+            <div id="box">
+                <img src="../pictures/2.png" width="37" height="31" />
+            </div>
+            <h2>尊敬的用户，欢迎您！</h2>
+            <div id="mes">
+                <ul>
+                    <li><a href="PersonalMessagecenter.html">未读消息【0】   |</a></li>
+                    <li><a href="PersonalCenter.html">个人中心   |</a></li>
+                    <li><a href="#">退出   |</a></li>
+                </ul>
+            </div>
+        </div>
+       
+        <div class="sidebar">
+            <ul class="menu">
+                <li class="level1">
+                    <a href="#none">发文管理</a>
+                    <ul class="level2">
+                        <li><a href="DocumentManagerDraft.html">草稿箱</a></li>
+                        <li><a href="DocumentManagerBacklog.html">待办箱</a></li>
+                        <li><a href="DocumentManagerTransaction.html">在办箱</a></li>
+                        <li><a href="DocumentManagerHandled.html">已办箱</a></li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <a href="#none">收文管理</a>
+                    <ul class="level2">
+                        <li><a href="DocumentManagerRecBacklog.html">待办箱</a></li>
+                        <li><a href="DocumentManagerRecTransaction.html">在办箱</a></li>
+                        <li><a href="DocumentManagerRecHandled.html">已办箱</a></li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <a href="#none">发文登记</a>
+                    <ul class="level2">
+                        <li><a href="DocumentManagerRegisterHandled.html">完成箱</a></li>
+                        <li><a href="DocumentManagerRegisterEnded.html">终止箱</a></li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <a href="#none">收文登记</a>
+                    <ul class="level2">
+                        <li><a href="DocumentManagerRecRegisterHandled.html">完成箱</a></li>
+                        <li><a href="DocumentManagerRecRegisterEnded.html">终止箱</a></li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <a href="#none">督办管理</a>
+                    <ul class="level2">
+                         <li><a href="DocumentManagerSuperviseDraft.html">草稿箱</a></li>
+                        <li><a href="DocumentManagerSuperviseBacklog.html">待办箱</a></li>
+                        <li><a href="DocumentManagerSuperviseTransaction.html">在办箱</a></li>
+                        <li><a href="DocumentManagerSuperviseHandled.html">完成箱</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="text">
+            <h3>首页--公文管理--发文管理--公文操作</h3>
+            <h1>审核</h1>
+            <hr style="width: 866px; color: #999;  margin-top:-2px;"/>
+           	<div style="width:800px;margin:20px auto;">
+           	
+           	<div class="toolbar">
+				<button>修改</button>
+				<a href="DocumentManagerTransaction.html"><button>审核通过</button></a>
+				<a href="DocumentManagerBacklog.html"><button>返回</button></a>
+			</div>
+			
+			<div style="width:800px;margin:20px auto;">
+				<div class="search_type_select">
+					<div class="text_title">类型</div>
+					<div class="input_text" type="text" >通报</div>
+				</div>
+				<div class="search_type_select">
+					<div class="text_title">文号</div>
+					<div class="input_text" type="text" >J300</div>
+				</div>
+				<div class="title_type_input">
+					<div class="text_title">标题</div>
+					<div class="title_input_text" type="text" >2015年国庆放假通知</div>
+				</div>
+				<div class="main_content_div">
+					<div class="text_title">正文</div>
+					<textarea class="main_content_text" type="text" disabled="disabled" style="background-color: white;"></textarea>
+				</div>
+				<div class="main_content_div">
+					<div class="text_title">意见</div>
+					<textarea class="view_content_text" type="text"></textarea>
+				</div>
+			</div>
+	
+			<div class="toolbar">
+				<button>修改</button>
+				<button>审核通过</button>
+				<button>返回</button>
+			</div>
+			
+			<div class="push_bottom"></div>
+	
+	
+              </div>     
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../js/select.js" ></script>
+</html>

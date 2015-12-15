@@ -1,0 +1,202 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+  <head>
+    <base href="<%=basePath%>">
+    
+    <title>backlog</title>
+    <meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="./css/StyleSheet.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/DocumentManagerDraft.css" />
+	<script src="./js/menu.js"></script>
+    <script src="./js/jquery1.7.js"></script>
+   		
+  	</head>
+  
+  <body>
+ <div id="header">
+        <div id="logo">
+            <img src="./img/logo.png" width="75" height="60" />
+        </div>
+        <div id="biaoti">
+            <h1>公文审批</h1>
+        </div>
+        <div id="caidan">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">公文管理</a></li>
+                <li><a href="#">内容管理</a></li>
+                <li><a href="#">个人事务</a></li>
+                <li><a href="#">公共事务</a></li>
+                <li><a href="#">综合信息</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="note">
+            <div id="box">
+                <img src="./img/userpic.png" width="37" height="31" />
+            </div>
+            <h2>尊敬的用户，欢迎您！</h2>
+            <div id="mes">
+                <ul>
+                    <li><a href="#">未读消息【0】   |</a></li>
+                    <li><a href="#">个人中心   |</a></li>
+                    <li><a href="#">退出   |</a></li>
+                </ul>
+            </div>
+        </div>
+       
+       	<div class="sidebar">
+            <ul class="menu">
+                <li class="level1">
+                    <a>发文管理</a>
+                    <ul class="level2">
+                        <li><a href="DocumentManagerDraft.html">草稿箱</a></li>
+                        <li><a href="DocumentManagerBacklog.html">待办箱</a></li>
+                        <li><a href="DocumentManagerTransaction.html">在办箱</a></li>
+                        <li><a href="DocumentManagerHandled.html">已办箱</a></li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <a href="#none">收文管理</a>
+                    <ul class="level2">
+                        <li><a href="DocumentManagerRecBacklog.html">待办箱</a></li>
+                        <li><a href="DocumentManagerRecTransaction.html">在办箱</a></li>
+                        <li><a href="DocumentManagerRecHandled.html">已办箱</a></li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <a href="#none">发文登记</a>
+                    <ul class="level2">
+                        <li><a href="DocumentManagerRegisterHandled.html">完成箱</a></li>
+                        <li><a href="DocumentManagerRegisterEnded.html">终止箱</a></li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <a href="#none">收文登记</a>
+                    <ul class="level2">
+                        <li><a href="DocumentManagerRecRegisterHandled.html">完成箱</a></li>
+                        <li><a href="DocumentManagerRecRegisterEnded.html">终止箱</a></li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <a href="#none">督办管理</a>
+                    <ul class="level2">
+                        <li><a href="DocumentManagerSuperviseDraft.html">草稿箱</a></li>
+                        <li><a href="DocumentManagerSuperviseBacklog.html">待办箱</a></li>
+                        <li><a href="DocumentManagerSuperviseTransaction.html">在办箱</a></li>
+                        <li><a href="DocumentManagerSuperviseHandled.html">完成箱</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+       
+         <div class="text">
+             <h3>首页--公文管理--发文管理--查看</h3>
+             <h1>公文信息</h1>
+             <hr style="width: 866px; color: #999;  margin-top:-2px;"/>
+           <div style="width:800px;margin:20px auto;">
+				<div class="toolbar">
+							<button>打印</button>
+							<a href="DocumentManagerHandled.html"><button>返回</button></a>
+				</div>
+				<div style="width:800px;margin:20px auto;">
+					<div class="input_div_line">
+						<div class="text_title_s">标题</div>
+						<div class="input_text_t" type="text" style="text-align: center;">2015年国庆放假通知</div>
+					</div>
+					<div class="input_div_line">
+						<div class="text_title_s">公文类型</div>
+						<div class="input_text" type="text">通报</div>
+					</div>
+					<div class="input_div_line">
+						<div class="text_title_s">文号</div>
+						<div class="input_text" type="text">J300</div>
+					</div>
+					<div class="input_div">
+						<div class="text_title_s">拟稿部门</div>
+						<div class="search_select_text">办公室</div>
+					</div>
+					<div class="input_div">
+						<div class="text_title_s">拟稿人</div>
+						<div class="search_select_text">员工A</div>
+					</div>
+					<div class="input_div_line">
+						<div class="text_title_s">密级</div>
+						<div class="search_select_text">普通</div>
+					</div>
+					<div class="input_div_line">
+						<div class="text_title_s">流程状态</div>
+						<div class="search_select_text">已办结</div>
+					</div>
+					<div class="main_content_div">
+						<div class="text_title_s">正文</div>
+						<textarea class="main_content_text_s" disabled="disabled" style="background-color: white;" type="text"></textarea>
+					</div>
+					<div class="input_div_line">
+						<div class="text_title_s">备注</div>
+						<textarea class="input_text_s" disabled="disabled" style="background-color: white;" type="text" ></textarea>
+					</div>
+       			<hr style="width: 700px; color: #CCCCCC;  margin:10px 50px;float: left;"/>
+       			<div style="float:left;width: 800px;font-size: 16px;margin: 10px 0;text-align: center;">流程步骤</div>
+				<table class="table_content" id="dynamicTable" width="800" border="0" cellspacing="0" cellpadding="0">
+					<thead>
+						<tr>
+							<td class="table_item item_checkbox"></td>
+							<td class="table_item item_process_s">流程</td>
+							<td class="table_item item_time">操作时间</td>
+							<td class="table_item item_operadepart_s">操作人员</td>
+							<td class="table_item item_process_situation_s">状态</td>
+							<td class="table_item item_operation_feedback">办理意见</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr id="teble_line1" class="table_row">
+							<td class="table_item item_checkbox">1</td>
+							<td class="table_item item_process_s">审批</td>
+							<td class="table_item item_time">2015/9/30</td>
+							<td class="table_item item_operadepart_s">员工A</td>
+							<td class="table_item item_process_situation_s">已办理</td>
+							<td class="table_item item_operation_feedback">通过</td>
+						</tr>
+						<tr>
+							<td class="table_item item_checkbox">2</td>
+							<td class="table_item item_process_s">会签</td>
+							<td class="table_item item_time">2015/10/1</td>
+							<td class="table_item item_operadepart_s">员工B</td>
+							<td class="table_item item_process_situation_s">已办理</td>
+							<td class="table_item item_operation_feedback">同意</td>
+						</tr>
+						<tr>
+							<td class="table_item item_checkbox">3</td>
+							<td class="table_item item_process_s">归档</td>
+							<td class="table_item item_time">2015/10/2</td>
+							<td class="table_item item_operadepart_s">系统</td>
+							<td class="table_item item_process_situation_s">已办理</td>
+							<td class="table_item item_operation_feedback">归档成功</td>
+						</tr>
+					</tbody>
+				</table>	
+				<div class="push_bottom"></div>
+	
+	
+	
+	
+            
+              </div>     
+        </div>
+    </div>
+  </body>
+</html>

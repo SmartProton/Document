@@ -1,0 +1,217 @@
+﻿body {
+    font: '微软雅黑';
+}
+/*下拉选择*/
+.select-wrapper {
+    font: normal 14px '\5FAE\8F6F\96C5\9ED1';
+    width: 240px;
+    height: 34px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    *display: inline;
+    *float: left;
+    *margin-right: 10px;
+    background: #fff;
+    border-radius: 3px;
+    border: 1px solid #e3e3e3;
+}
+
+    .select-wrapper.focus {
+        border: 1px solid #9A58B2;
+    }
+
+.select-button {
+    font: normal 14px '\5FAE\8F6F\96C5\9ED1';
+    width: 238px;
+    height: 34px;
+    border: 0;
+    border-radius: 3px;
+    background: #fff;
+    cursor: pointer;
+    padding: 0 26px 0 10px;
+    overflow: hidden;
+    text-align: left;
+    outline: none;
+    white-space: nowrap;
+    word-break: keep-all;
+    text-overflow: ellipsis;
+}
+
+.select-down {
+    position: absolute;
+    top: 21px;
+    right: 12px;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    font-size: 0;
+    border-color: #333 transparent transparent transparent;
+    border-style: solid;
+    border-width: 6px;
+}
+
+.disabled {
+    color: #cccccc;
+}
+
+.select-list {
+    width: 238px;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 0 3px #ddd;
+    border-radius: 3px;
+    display: none;
+    z-index: 2;
+    position: absolute;
+    left: -1px;
+    top: 35px;
+    overflow: hidden;
+}
+
+    .select-list ul {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        line-height: 34px;
+        max-height: 240px;
+    }
+
+        .select-list ul li {
+            width: auto;
+            height: 34px;
+            padding-left: 10px;
+            cursor: pointer;
+            overflow: hidden;
+            white-space: nowrap;
+            word-break: keep-all;
+            text-overflow: ellipsis;
+        }
+
+            .select-list ul li.selected,
+            .select-list ul li:hover {
+                color: #fff;
+                background: #9A58B2;
+            }
+
+/* 下拉列表不可用样式 */
+.select-button-disable {
+    color: #ccc;
+    width: 238px;
+    height: 34px;
+    border: 1px solid #e3e3e3;
+    border-radius: 3px;
+    background: #fff;
+    cursor: pointer;
+    padding-left: 10px;
+    overflow: hidden;
+    text-align: left;
+    outline: none;
+}
+
+.select-down-disable {
+    color: #ccc;
+    font-size: 18px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    line-height: 34px;
+}
+
+
+/*password*/
+.input_div_line th {
+    height: 18px;
+    width: 80px;
+    font-family: Arial;
+    font-weight: 400;
+}
+
+.pw-strength {
+    clear: both;
+    position: relative;
+    top: 8px;
+    width: 180px;
+}
+
+.pw-bar {
+    background: url(http://localhost:45306/pictures/pwd-1.png) no-repeat;
+    height: 14px;
+    overflow: hidden;
+    width: 179px;
+}
+
+.pw-bar-on {
+    background: url(http://localhost:45306/pictures/pwd-2.png) no-repeat;
+    width: 0px;
+    height: 14px;
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    transition: width .5s ease-in;
+    -moz-transition: width .5s ease-in;
+    -webkit-transition: width .5s ease-in;
+    -o-transition: width .5s ease-in;
+}
+
+.pw-weak .pw-defule {
+    width: 0px;
+}
+
+.pw-weak .pw-bar-on {
+    width: 60px;
+}
+
+.pw-medium .pw-bar-on {
+    width: 120px;
+}
+
+.pw-strong .pw-bar-on {
+    width: 179px;
+}
+
+.pw-txt {
+    padding-top: 2px;
+    width: 180px;
+    overflow: hidden;
+}
+
+    .pw-txt span {
+        color: #707070;
+        float: left;
+        font-size: 12px;
+        text-align: center;
+        width: 58px;
+    }
+
+/*消息中心toolbar2*/
+.toolbar2 {
+    width: 800px;
+    height: auto;
+    box-sizing: border-box;
+    padding: 5px;
+    /*background-color: #E8E8E8;*/
+    float: left;
+}
+
+    .toolbar2 button {
+        margin: auto;
+        padding: 5px 15px;
+        font-size: 12px;
+    }
+
+
+/*userchange （更改为那行）*/
+.change {
+    width: 800px;
+    height: 25px;
+    background-color: #E8E8E8;
+    float: left;
+}
+
+    .change a {
+        font-size: 18px;
+        font-family: '微软雅黑';
+        margin-left: 5px;
+    }

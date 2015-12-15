@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../css/StyleSheet.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/Contract.css" />
+    <script src="../js/menu.js"></script>
+    <script src="../js/jquery1.7.js"></script>
+    
+    <title>公文审批系统-合同管理--已评审</title>
+</head>
+<body>
+
+    <div id="header">
+        <div id="logo">
+            <img src="../pictures/1.png" width="75" height="60" />
+        </div>
+        <div id="biaoti">
+            <h1>公文审批</h1>
+        </div>
+        <div id="caidan">
+            <ul>
+                <li><a href="Home.html">首页</a></li>
+                <li><a href="Affairs.html">个人事务</a></li>
+                <li><a href="DocumentManagerDraft.html">公文管理</a></li>
+                <li><a href="FileManagerRead.html">档案管理</a></li>
+                <li><a href="PublicInformation.html">公共信息</a></li>
+                <li><a href="ContractBacklog.html">合同管理</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="note">
+            <div id="box">
+                <img src="../pictures/2.png" width="37" height="31" />
+            </div>
+            <h2>尊敬的用户，欢迎您！</h2>
+            <div id="mes">
+                <ul>
+                     <li><a href="PersonalMessagecenter.html">未读消息【0】   |</a></li>
+                    <li><a href="PersonalCenter.html">个人中心   |</a></li>
+                    <li><a href="#">退出   |</a></li>
+                </ul>
+            </div>
+        </div>
+       
+        <div class="sidebar">
+            <ul class="menu">
+                <li class="level1">
+                    <a href="#none">办公登记</a>
+                    <ul class="level2">
+                        <li><a href="ContractDraft.html">草稿箱</a></li>
+                        <li><a href="ContractBacklog.html">已评审</a></li>
+                        <li><a href="ContractHandled.html">未评审</a></li>
+                        <li><a href="ContractSupervise.html">执行监督</a></li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <a href="#none">合同归档</a>
+                    <ul class="level2">
+                       <li><a href="ContractPlace.html">合同归档</a></li>
+                        <li><a href="ContractRefer.html">归档查询</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+         <div class="text">
+             <h3>首页--合同管理--办公登记--已评审</h3>
+             <h1>已评审</h1>
+             <hr style="width: 866px; color: #999;  margin-top:-2px;"/>
+           <div style="width:800px;margin:20px auto;">
+		<div class="search_div">
+			<div class="search_title">信息查询</div>
+			<div class="search_content">
+				<div class="search_type_select">
+					<div class="text_title">编号</div>
+					<input class="search_select_text" />
+				</div>
+				<div class="search_type_select">
+					<div class="text_title">执行人</div>
+					<input class="search_select_text" />
+				</div>
+				<div class="search_type_date">
+					<div class="text_title">日期</div>
+					<div class="search_select_text"></div>
+					<div class="search_select_date">...</div>
+					<div class="text_title">到</div>
+					<div class="search_select_text"></div>
+					<div class="search_select_date">...</div>
+				</div>
+				<a href="#" class="search_button button_gray">查询</a>
+				<div class="search_type_input">
+					<div class="text_title">标题</div>
+					<input class="search_input_text" />
+				</div>
+			</div>
+		</div>
+	
+	
+	
+	
+	<table class="table_content" id="dynamicTable" width="800" border="0" cellspacing="0" cellpadding="0">
+		<thead>
+			<tr>
+				<td class="table_item item_checkbox"></td>
+				<td class="table_item item_title">标题</td>
+				<td class="table_item item_time">发布日期</td>
+				<td class="table_item item_id">编号</td>
+				<td class="table_item item_operator">执行人</td>
+				<td class="table_item item_remark">备注</td>
+				<td class="table_item item_operation">操作</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr id="teble_line1" class="table_row">
+				<td class="table_item item_checkbox"></td>
+				<td class="table_item item_title">2015年国庆放假通知</td>
+				<td class="table_item item_time">2015/9/30</td>
+				<td class="table_item item_id">Z100</td>
+				<td class="table_item item_operator">员工A</td>
+				<td class="table_item item_remark">-</td>
+				<td class="table_item item_operation">查看</td>
+			</tr>
+		</tbody>
+	</table>
+	
+       <div class="toolbar">
+				<div class="pageswitchdiv">
+					<button>前一页</button>
+					<span>1</span>/<span>1</span>页
+					<button>后一页</button>
+					<input type="text" style="width: 20px;"/>
+					<button>GO</button>
+				</div>
+			</div>     
+              </div>     
+        </div>
+    </div>
+</body>
+</html>

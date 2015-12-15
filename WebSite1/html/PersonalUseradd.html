@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../css/StyleSheet.css" rel="stylesheet" />
+    <link href="../css/personalcenter.css" rel="stylesheet" />
+    <link href="../css/DocumentManagerDraft.css" rel="stylesheet" />
+    <script src="../js/menu.js"></script>
+    <script src="../js/jquery-1.9.1.min.js"></script>
+    <script src="../js/jquery.selectlist.js"></script>
+   <!-- <script type="text/javascript">
+        $(function () {
+            $('select').selectlist({
+                zIndex: 10,
+                width: 300,
+                height: 20
+            });
+        })
+    </script>-->
+    <title>公文审批系统--用户增加</title>
+</head>
+<body>
+    <div id="header">
+        <div id="logo">
+            <img src="../pictures/1.png" width="75" height="60" />
+        </div>
+        <div id="biaoti">
+            <h1>公文审批</h1>
+        </div>
+        <div id="caidan">
+            <ul>
+                <li><a href="Home.html">首页</a></li>
+                <li><a href="Affairs.html">个人事务</a></li>
+                <li><a href="DocumentManagerDraft.html">公文管理</a></li>
+                <li><a href="FileManagerRead.html">档案管理</a></li>
+                <li><a href="PublicInformation.html">公共信息</a></li>
+                <li><a href="ContractBacklog.html">合同管理</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="note">
+            <div id="box">
+                <img src="../pictures/2.png" width="37" height="31" />
+            </div>
+            <h2>尊敬的用户，欢迎您！</h2>
+            <div id="mes">
+                <ul>
+                    <li><a href="PersonalMessagecenter.html">未读消息【0】   |</a></li>
+                    <li><a href="PersonalCenter.html">个人中心   |</a></li>
+                    <li><a href="#">退出   |</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <ul class="menu">
+                <li class="level1">
+                    <a href="#none">个人中心</a>
+                    <ul class="level2">
+                        <li><a href="PersonalCenter.html">个人信息</a></li>
+                        <li><a href="PersonalMessagecenter.html">消息中心</a></li>
+                        <li><a href="PersonalAccountmanager.html">账号管理</a></li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <a href="#none">系统管理</a>
+                    <ul class="level2">
+                         <li><a href="PersonalPowersetting.html">权限设置</a></li>
+                        <li><a href="PersonalProcesssetting.html">流程设置</a></li>
+                        <li><a href="PersonalUsermanager.html">用户管理</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="text">
+            <h3>首页--个人中心--系统管理--用户管理--增加用户</h3>
+            <h1>增加用户</h1>
+            <hr style="width: 866px; color: #999; margin-top: -2px;" />
+            <div style="width: 800px; margin: 20px auto;">
+                <div class="toolbar">
+                    <a href="PersonalUsermanager.html"><button>确认添加</button></a>
+                    <a href="PersonalUsermanager.html"><button>返回</button></a>
+                </div>
+                <div style="width: 800px; margin: 20px auto;">
+                    <div class="input_div_line">
+                        <div class="text_title_s">职员编号</div>
+                        <div class="input_text" type="text"></div>
+                    </div>
+                    <form class="input_div_line">
+                        <div class="text_title_s">性别</div>
+                        <input type="radio" checked="checked" name="security" value="normal" />男
+						<input type="radio" checked="checked" name="security" value="normal" />女
+                    </form>
+                    <div class="input_div_line">
+                        <div class="text_title_s">姓名</div>
+                        <div class="input_text" type="text"></div>
+                    </div>
+                    <div class="input_div_line">
+                        <div class="text_title_s">部门职务</div>
+                        <div id="main_demo">
+                            <select id="dep" name="dep">
+                                <option value="0">研发部</option>
+                                <option value="1">技术部</option>
+                                <option value="2">设计部</option>
+                                <option value="3">人力资源部</option>
+                                <option value="4">行政部</option>
+                                <option value="5">后勤部</option>
+                                <option value="6">销售部</option>
+                                <option value="7">维修部</option>
+                                <option value="8">投诉部</option>
+                                <option value="9">主管部</option>
+                            </select>
+                            <select id="pos" name="pos">
+                                <option value="0">部门经理</option>
+                                <option value="1">主管1</option>
+                                <option value="2">主管2</option>
+                                <option value="3">副经理1</option>
+                                <option value="4">副经理2</option>
+                                <option value="5">职员1</option>
+                                <option value="6">职员2</option>
+                                <option value="7">职员3</option>
+                                <option value="8">职员4</option>
+                                <option value="9">实习生</option>
+                            </select>
+                        </div>
+                    </div>
+                        <div class="input_div_line">
+                            <div class="text_title_s">权限等级</div>
+                            <div id="power">
+                            <select id="gra" name="gra">
+                                <option value="0">1</option>
+                                <option value="1">2</option>
+                                <option value="2">3</option>
+                                <option value="3">4</option>
+                                <option value="4">5</option>
+                                <option value="5">6</option>
+                                <option value="6">7</option>
+                            </select>
+                        </div>
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

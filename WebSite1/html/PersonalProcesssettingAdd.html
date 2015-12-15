@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../css/StyleSheet.css" rel="stylesheet" />
+    <link href="../css/DocumentManagerDraft.css" rel="stylesheet" />
+    <link href="../css/personalcenter.css" rel="stylesheet" />
+    <script src="../js/jquery-1.9.1.min.js"></script>
+    <script src="../js/jquery.selectlist.js"></script>
+    <script src="../js/menu.js"></script>
+    <!--<script type="text/javascript">
+        $(function () {
+            $('select').selectlist({
+                zIndex: 10,
+                width: 300,
+                height: 20
+            });
+        })
+    </script>-->
+    <title>公文审批系统--流程增加</title>
+</head>
+<body>
+    <div id="header">
+        <div id="logo">
+            <img src="../pictures/1.png" width="75" height="60" />
+        </div>
+        <div id="biaoti">
+            <h1>公文审批</h1>
+        </div>
+        <div id="caidan">
+            <ul>
+                 <li><a href="Home.html">首页</a></li>
+                <li><a href="Affairs.html">个人事务</a></li>
+                <li><a href="DocumentManagerDraft.html">公文管理</a></li>
+                <li><a href="FileManagerRead.html">档案管理</a></li>
+                <li><a href="PublicInformation.html">公共信息</a></li>
+                <li><a href="ContractBacklog.html">合同管理</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="note">
+            <div id="box">
+                <img src="../pictures/2.png" width="37" height="31" />
+            </div>
+            <h2>尊敬的用户，欢迎您！</h2>
+            <div id="mes">
+                <ul>
+                    <li><a href="PersonalMessagecenter.html">未读消息【0】   |</a></li>
+                    <li><a href="PersonalCenter.html">个人中心   |</a></li>
+                    <li><a href="#">退出   |</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <ul class="menu">
+                <li class="level1">
+                    <a href="#none">个人中心</a>
+                    <ul class="level2">
+                        <li><a href="PersonalCenter.html">个人信息</a></li>
+                        <li><a href="PersonalMessagecenter.html">消息中心</a></li>
+                        <li><a href="PersonalAccountmanager.html">账号管理</a></li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <a href="#none">系统管理</a>
+                    <ul class="level2">
+                        <li><a href="PersonalPowersetting.html">权限设置</a></li>
+                        <li><a href="PersonalProcesssetting.html">流程设置</a></li>
+                        <li><a href="PersonalUsermanager.html">用户管理</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="text">
+            <h3>首页--个人中心--系统管理--流程设置--更改流程</h3>
+            <h1>更改流程</h1>
+            <hr style="width: 866px; color: #999; margin-top: -2px;" />
+            <div style="width: 800px; margin: 20px auto;">
+                <div class="input_div_line">
+                    <div class="text_title_s">公文类型</div>
+                    <div id="sty">
+                        <select id="style" name="style">
+                            <option value="0">通告</option>
+                            <option value="1">2</option>
+                            <option value="2">3</option>
+                            <option value="3">4</option>
+                            <option value="4">5</option>
+                            <option value="5">6</option>
+                            <option value="6">7</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input_div_line">
+                    <div class="text_title_s">流程描述</div>
+                    <div class="input_text" type="text">中间有会签的流程</div>
+                </div>
+                <div class="input_div_line">
+                    <div class="text_title_s">流程类型</div>
+                    <div id="Div1">
+                        <select id="Select1" name="style">
+                            <option value="0">通告流程1</option>
+                            <option value="1">2</option>
+                            <option value="2">3</option>
+                            <option value="3">4</option>
+                            <option value="4">5</option>
+                            <option value="5">6</option>
+                            <option value="6">7</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="toolbar">
+                    <a href="PersonalProcesssettingAdd.html">
+                        <button>添加</button></a>
+                    <button>更改</button>
+                    <button>删除</button>
+                </div>
+                <div style="width: 800px; margin: 20px auto;">
+                    <table class="table_content" id="dynamicTable" width="800" border="0" cellspacing="0" cellpadding="0">
+                        <thead>
+                            <tr>
+                                <td class="table_item item_checkbox">
+                                    <input type="checkbox" />
+                                </td>
+                                <td class="table_item item_title">流程名称</td>
+                                <td class="table_item item_time">操作部门</td>
+                                <td class="table_item item_situation">操作权限</td>
+                                <td class="table_item item_operation">操作</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr id="table_line1" class="table_row">
+                                <td class="table_item item_checkbox">
+                                    <input type="checkbox" />
+                                </td>
+                                <td class="table_item item_time">审核</td>
+                                <td class="table_item item_time">办公室</td>
+                                <td class="table_item item_type">4</td>
+                                <a href="#">
+                                    <td class="table_item item_operation">更改</td>
+                                </a>
+                            </tr>
+
+                            <tr id="table_line2" class="table_row">
+                                <td class="table_item item_checkbox">
+                                    <input type="checkbox" />
+                                </td>
+                                <td class="table_item item_time">会签</td>
+                                <td class="table_item item_time">总经办</td>
+                                <td class="table_item item_type">4</td>
+                                <a href="#">
+                                    <td class="table_item item_operation">签发</td>
+                                </a>
+                            </tr>
+
+                            <tr id="table_line3" class="table_row">
+                                <td class="table_item item_checkbox">
+                                    <input type="checkbox" />
+                                </td>
+                                <td class="table_item item_time">归档</td>
+                                <td class="table_item item_time">系统</td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="toolbar">
+                        <div class="pageswitchdiv">
+                            <button>前一页</button>
+                            <span>1</span>/<span>1</span>页
+					<button>后一页</button>
+                            <input type="text" style="width: 20px;" />
+                            <button>GO</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

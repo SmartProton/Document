@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../css/StyleSheet.css" rel="stylesheet" />
+    <link href="../css/step-dc-style2.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/DocumentManagerDraft.css" />
+    <!--文本编辑器-->
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../css/summernote.css" rel="stylesheet" />
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/summernote.min.js"></script>
+    <!--确认返回-->
+
+    <!--菜单-->
+    <script src="../js/menu.js"></script>
+    <!--下拉框-->
+    <script src="../js/jquery-1.9.1.min.js"></script>
+    <script src="../js/jquery.selectlist.js"></script>
+    <!--进度条-->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/step-jquery-dc.js"></script>
+    
+
+
+
+    <title>公文审批系统--公文管理--发文管理--拟稿</title>
+</head>
+<body>
+
+    <div id="header">
+        <div id="logo">
+            <img src="../pictures/1.png" width="75" height="60" />
+        </div>
+        <div id="biaoti">
+            <h1>公文审批</h1>
+        </div>
+        <div id="caidan">
+            <ul>
+                <li><a href="Home.html">首页</a></li>
+                <li><a href="Affairs.html">个人事务</a></li>
+                <li><a href="DocumentManagerDraft.html">公文管理</a></li>
+                <li><a href="FileManagerRead.html">档案管理</a></li>
+                <li><a href="PublicInformation.html">公共信息</a></li>
+                <li><a href="ContractBacklog.html">合同管理</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="note">
+            <div id="box">
+                <img src="../pictures/2.png" width="37" height="31" />
+            </div>
+            <h2>尊敬的用户，欢迎您！</h2>
+            <div id="mes">
+                <ul>
+                    <li><a href="PersonalMessagecenter.html">未读消息【0】   |</a></li>
+                    <li><a href="PersonalCenter.html">个人中心   |</a></li>
+                    <li><a href="#">退出   |</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <ul class="menu">
+                <li class="level1">
+                    <a href="#none">发文管理</a>
+                    <ul class="level2">
+                        <li><a href="DocumentManagerDraft.html">草稿箱</a></li>
+                        <li><a href="DocumentManagerBacklog.html">待办箱</a></li>
+                        <li><a href="DocumentManagerTransaction.html">在办箱</a></li>
+                        <li><a href="DocumentManagerHandled.html">已办箱</a></li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <a href="#none">收文管理</a>
+                    <ul class="level2">
+                        <li><a href="DocumentManagerRecBacklog.html">待办箱</a></li>
+                        <li><a href="DocumentManagerRecTransaction.html">在办箱</a></li>
+                        <li><a href="DocumentManagerRecHandled.html">已办箱</a></li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <a href="#none">发文登记</a>
+                    <ul class="level2">
+                        <li><a href="DocumentManagerRegisterHandled.html">完成箱</a></li>
+                        <li><a href="DocumentManagerRegisterEnded.html">终止箱</a></li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <a href="#none">收文登记</a>
+                    <ul class="level2">
+                        <li><a href="DocumentManagerRecRegisterHandled.html">完成箱</a></li>
+                        <li><a href="DocumentManagerRecRegisterEnded.html">终止箱</a></li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <a href="#none">督办管理</a>
+                    <ul class="level2">
+                        <li><a href="DocumentManagerSuperviseDraft.html">草稿箱</a></li>
+                        <li><a href="DocumentManagerSuperviseBacklog.html">待办箱</a></li>
+                        <li><a href="DocumentManagerSuperviseTransaction.html">在办箱</a></li>
+                        <li><a href="DocumentManagerSuperviseHandled.html">完成箱</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="text">
+            <h3>首页--公文管理--发文管理--拟稿</h3>
+            <h1>拟稿</h1>
+            <div class="jindu">
+                <div class="step_context test"></div>
+                <!--当前步骤：第<input type="text"  value="5" id="currentStepVal" />步 <button onclick="StepTool.drawStep(jQuery('#currentStepVal').val(),stepListJson);" type="button">重新生成</button>-->
+                <script type="text/javascript">
+                    //所有步骤的数据
+                    var stepListJson = [{ StepNum: 1, StepText: "拟稿" },
+                    { StepNum: 2, StepText: "审核" },
+                    { StepNum: 3, StepText: "会签" },
+                    { StepNum: 4, StepText: "第四步" },
+                    { StepNum: 5, StepText: "第五步" },
+                    { StepNum: 6, StepText: "第六步" },
+                    { StepNum: 7, StepText: "第七步" }];
+
+                    //当前进行到第几步
+                    var currentStep = 5;
+                    //new一个工具类
+                    var StepTool = new Step_Tool_dc("test", "mycall");
+                    //使用工具对页面绘制相关流程步骤图形显示
+                    StepTool.drawStep(currentStep, stepListJson);
+                    //回调函数
+                    function mycall(restult) {
+                        //	alert("mycall"+result.value+":"+result.text);
+                        StepTool.drawStep(result.value, stepListJson);
+                        //TODO...这里可以填充点击步骤的后加载相对应数据的代码
+                    }
+                </script>
+            </div>
+            <hr style="width: 866px; color: #999; margin-top: -2px;" />
+
+            <div style="width: 800px; margin: 20px auto;">
+
+                <div class="toolbar">
+                    <a href="DocumentManagerDraft.html">
+                        <button>存稿</button></a>
+                    <a href="DocumentManagerSubConfirm.html">
+                        <button>提交</button></a>
+                    <a href="DocumentManagerDraft.html">
+                        <button>返回</button></a>
+                </div>
+
+                <div style="width: 800px; margin: 20px auto;">
+                    <div class="search_type_select">
+                        <div class="text_title">类型</div>
+                        <div id="type">
+                            <select id="type1" name="type1">
+                                <option value="0">请选择类型</option>
+                                <option value="1">通报</option>
+                                <option value="2">决议</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="search_type_select">
+                        <div class="text_title">文号</div>
+                        <input class="input_text" type="text" />
+                    </div>
+                    <div class="title_type_input">
+                        <div class="text_title">标题</div>
+                        <input class="title_input_text" type="text" />
+                    </div>
+
+                    <div class="main_content_div">
+                        <div class="text_title">正文</div>
+                        <div id="editor">
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+
+        $('#editor').summernote({
+            height: 250,
+            minHeight: 200,
+            maxHeight: 400,
+            focus: true,
+        });
+    </script>
+</body>
+
+</html>
